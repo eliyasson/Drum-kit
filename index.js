@@ -1,34 +1,49 @@
 const drum = document.querySelectorAll(".drum");
 for (let i = 0; i < drum.length; i++) {
     drum[i].addEventListener("click", function () {
-        let buttonInnerHTML = this.innerHTML;
-        if(buttonInnerHTML === "w") {
-            const tom1 = new Audio('./sounds/tom-1.mp3');
-            tom1.play();
-        } else if(buttonInnerHTML === "a"){
-            const tom2 = new Audio('./sounds/tom-2.mp3');
-            tom2.play();
-        } else if(buttonInnerHTML === "s"){
-            const tom3 = new Audio('./sounds/tom-3.mp3');
-            tom3.play();
-        } else if(buttonInnerHTML === "d"){
-            const tom4 = new Audio('./sounds/tom-4.mp3');
-            tom4.play();
-        } else if(buttonInnerHTML === "j") {
-            const snare = new Audio('./sounds/snare.mp3');
-            snare.play();
-        } else if (buttonInnerHTML === "k") {
-            const crash = new Audio('./sounds/crash.mp3');
-            crash.play();
-        } else if (buttonInnerHTML === "l") {
-            const kick = new Audio('./sounds/kick-bass.mp3');
-            kick.play();
-        } else {
+        let innerHTML = this.innerHTML;
+        playSound(innerHTML);
+    });   
+};
+document.addEventListener("keydown", function(event) {
+    const keyPressed = event.key.toLowerCase();
 
-        }
+    if(keyPressed === "w" || keyPressed === "a" || keyPressed === "s" ||
+        keyPressed === "d" || keyPressed === "j" || keyPressed === "k" || keyPressed === "l") {
+        playSound(keyPressed);
+    }
+})
 
 
-        /*switch(buttonInnerHTML) {
+
+function playSound(key) {
+            if(key === "w") {
+            const tom1 = new Audio('./sounds/tom-1.mp3').play();
+            } else if(key === "a"){
+                const tom2 = new Audio('./sounds/tom-2.mp3').play();
+
+            } else if(key === "s"){
+                const tom3 = new Audio('./sounds/tom-3.mp3').play();
+            
+            } else if(key === "d"){
+                const tom4 = new Audio('./sounds/tom-4.mp3').play();
+            
+            } else if(key === "j") {
+                const snare = new Audio('./sounds/snare.mp3').play();
+            
+            } else if (key === "k") {
+                const crash = new Audio('./sounds/crash.mp3').play();
+                
+            } else if (key === "l") {
+                const kick = new Audio('./sounds/kick-bass.mp3').play();
+            
+            } else {
+
+            }
+        
+
+
+        /*switch(key) {
             case "w": 
                 const tom1 = new Audio('./sounds/tom-1.mp3');
                 tom1.play(); 
@@ -61,9 +76,9 @@ for (let i = 0; i < drum.length; i++) {
 
             default:
         }*/
-    }); 
+    
  
-}
+};
 /*
 drum[i].addEventListener("click", () => {
         const audio = new Audio('./sounds/tom-1.mp3');
