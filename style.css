@@ -1,6 +1,13 @@
 body {
   text-align: center;
   background-color: #283149;
+  font-family: 'Arvo', serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 h1 {
@@ -45,6 +52,7 @@ footer {
 }
 
 .set {
+
   margin: 10% auto;
 }
 
@@ -78,4 +86,16 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+}
+.drum:hover {
+  background-color: #2980b9;
+}
+@media only screen and (max-width: 600px) {
+  .set {
+      flex-direction: column;
+  }
+
+  .drum {
+      margin-bottom: 10px;
+  }
 }
