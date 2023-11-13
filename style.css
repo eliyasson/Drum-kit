@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background-color: #304928c0;
   font-family: 'Arvo', serif;
   margin: 0;
   display: flex;
@@ -8,11 +8,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url(./images/drum.png);
+  
+  background-position: center;
+  
 }
 
 h1 {
   font-size: 5rem;
-  color: #DBEDF3;
+  color: #eeff00;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
 }
