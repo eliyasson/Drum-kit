@@ -1,3 +1,4 @@
+//Detecting Button press
 const drum = document.querySelectorAll(".drum");
 for (let i = 0; i < drum.length; i++) {
     drum[i].addEventListener("click", function () {
@@ -5,13 +6,15 @@ for (let i = 0; i < drum.length; i++) {
         playSound(innerHTML);
     });   
 };
-document.addEventListener("keydown", function(event) {
-    const keyPressed = event.key.toLowerCase();
 
+//Detecting keyboard press
+document.addEventListener("keydown", function(event) {
+    playSound(event.key);
+    /*const keyPressed = event.key.toLowerCase();
     if(keyPressed === "w" || keyPressed === "a" || keyPressed === "s" ||
         keyPressed === "d" || keyPressed === "j" || keyPressed === "k" || keyPressed === "l") {
         playSound(keyPressed);
-    }
+    }*/
 })
 
 
