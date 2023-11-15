@@ -1,4 +1,3 @@
-/*
 //Detecting Button press
 const drum = document.querySelectorAll(".drum");
 for (let i = 0; i < drum.length; i++) {
@@ -64,7 +63,7 @@ function playSound(key) {
             break;
 
             default:
-        } 
+        } */
 };
 
 function buttonAnimation(currentKey) {
@@ -74,9 +73,12 @@ function buttonAnimation(currentKey) {
         activeButton.classList.remove("pressed");
     }, 100);
 }
-*/
 
 
+
+
+
+/*
 
 
 
@@ -130,4 +132,4 @@ function playAudio(key) {
         default:
     }
 }
-
+*/
